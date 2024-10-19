@@ -4,7 +4,6 @@ const { blogs, sequelize, users } = require("./model");
 
 // const { where } = require("sequelize");
 
-const bcrypt = require("bcrypt");
 const {
   homePage,
   singleBlog,

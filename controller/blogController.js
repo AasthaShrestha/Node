@@ -3,6 +3,7 @@ const { blogs } = require("../model");
 exports.homePage = async (req, res) => {
   // tapaiko table ko j name xa same variable ko hunu vayena
   const datas = await blogs.findAll(); //findAll return the array
+  console.log("data aayo ki aayena", datas);
   //views vitra ko file render gardinxa
   res.render("home", { blogs: datas });
 };

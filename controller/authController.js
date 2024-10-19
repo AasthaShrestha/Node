@@ -1,4 +1,5 @@
-
+const { blogs, sequelize, users } = require("../model");
+const bcrypt = require("bcrypt");
 exports.registerUser = async (req, res) => {
   const { username, email, password } = req.body;
   await users.create({
@@ -30,10 +31,10 @@ exports.loginUser = async (req, res) => {
   }
 };
 
-  exports.renderRegister = (req,res)=>{
-    res.render("register")
-  }
+exports.renderRegister = (req, res) => {
+  res.render("register");
+};
 
-  exports.renderLogin = (req, res) => {
-    res.render("login");
-  };
+exports.renderLogin = (req, res) => {
+  res.render("login");
+};
