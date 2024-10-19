@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Home Page</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <%- include('./navbar.ejs') %>
+    <!-- body section -->
+
+    <div class="container">
+      <h1>Welcome to My Website</h1>
+      <div class="cards">
+      <%  blogs.forEach(function(blog){ %>
+
+          <div class="card">
+            <h3> <%- blog.title %> </h3>
+  
+            <img src="<%- blog.image %>" alt="<%- blog.title %>" />
+
+            <p><%- blog.description %></p>
+            <a href="/blog/<%- blog.id %>">Read more...</a>
+          </div>
+      <%  }) %>
+
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2024 My Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
